@@ -122,9 +122,11 @@
 
       // all statements after the variables declarations.
     }
+    
     ```
 
     ```javascript
+    
     // 3.B.2.1
     // Named Function Declaration
     function foo( arg1, argN ) {
@@ -248,9 +250,11 @@
     Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the example.
 
     ```
+    
     Bad: $(".testClass[href^='www.any.com']").show();
 
     Good: $('.testId[href^="www.any.com"]').show();
+    
     ```
 
     F. End of Lines and Empty Lines
@@ -431,77 +435,6 @@
     bool === !!string;
     // true
     ```
-
-    ```javascript
-    // 4.B.2.3
-
-    var array = [ "a", "b", "c" ];
-
-    !!~array.indexOf("a");
-    // true
-
-    !!~array.indexOf("b");
-    // true
-
-    !!~array.indexOf("c");
-    // true
-
-    !!~array.indexOf("d");
-    // false
-
-    // Note that the above should be considered "unnecessarily clever"
-    // Prefer the obvious approach of comparing the returned value of
-    // indexOf, like:
-
-    if ( array.indexOf( "a" ) >= 0 ) {
-      // ...
-    }
-    ```
-
-    ```javascript
-    // 4.B.2.4
-
-
-    var num = 2.5;
-
-    parseInt( num, 10 );
-
-    // is the same as...
-
-    ~~num;
-
-    num >> 0;
-
-    num >>> 0;
-
-    // All result in 2
-
-
-    // Keep in mind however, that negative numbers will be treated differently...
-
-    var neg = -2.5;
-
-    parseInt( neg, 10 );
-
-    // is the same as...
-
-    ~~neg;
-
-    neg >> 0;
-
-    // All result in -2
-    // However...
-
-    neg >>> 0;
-
-    // Will result in 4294967294
-
-
-
-
-    ```
-
-
 
 5. <a name="cond">Conditional Evaluation</a>
 
