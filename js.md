@@ -329,19 +329,20 @@
     undefined:
 
     > Global Variables:
-
+    ```
     >    typeof variable === "undefined"
-
+    ```
     >  Local Variables:
-
+    ```
     >    variable === undefined
-
+    ```
     >  Properties:
-
+    ```
     >    object.prop === undefined  
     >    object.hasOwnProperty( prop )  
     >    "prop" in object  
-
+    ```
+    
     B. Coerced Types
 
     Consider the implications of the following...
@@ -349,9 +350,7 @@
     Given this HTML:
 
     ```html
-
     <input type="text" id="foo-input" value="1">
-
     ```
 
 
@@ -375,9 +374,7 @@
     // This means that if you had logic that tested `foo` like:
 
     if ( foo === 1 ) {
-
       importantTask();
-
     }
 
     // `importantTask()` would never be evaluated, even though `foo` has a value of "1"
@@ -394,9 +391,7 @@
     // "number"
 
     if ( foo === 1 ) {
-
       importantTask();
-
     }
 
     // `importantTask()` will be called
