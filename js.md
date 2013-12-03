@@ -40,7 +40,7 @@
 2. <a name="whitespace">Whitespace</a>
   - Never mix spaces and tabs.
   - Use soft indents (spaces) instead of real tabs
-  - For readability, set your editor's indent size to four characters &mdash; this means four spaces or four spaces representing a real tab.
+  - For readability, set your editor's indent size to four characters
 
 3. <a name="spacing">Beautiful Syntax</a>
 
@@ -247,7 +247,7 @@
 
     D. Consistency Always Wins
 
-    In sections 2.A-2.C, the whitespace rules for consistency. Lines can be separated by up to one line of white space but should never
+    Whitespace rules for consistency. Lines can be separated by up to one line of white space but should never
     have more.
 
     ```javascript
@@ -279,11 +279,9 @@
     Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the example.
 
     ```
-    Bad:
-    $(".testClass[href^='www.any.com']").show();
+    Bad: $(".testClass[href^='www.any.com']").show();
 
-    Good
-    $('.testId[href^="www.any.com"]').show();
+    Good: $('.testId[href^="www.any.com"]').show();
     ```
 
     F. End of Lines and Empty Lines
@@ -358,7 +356,6 @@
     ```javascript
 
     // 4.B.1.1
-
     // `foo` has been declared with the value `0` and its type is `number`
     var foo = 0;
 
@@ -382,7 +379,6 @@
 
 
     // 4.B.1.2
-
     // You can preempt issues by using smart coercion with unary + or - operators:
 
     foo = +document.getElementById("foo-input").value;
