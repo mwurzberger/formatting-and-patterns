@@ -38,7 +38,7 @@
 
 2. <a name="whitespace">Whitespace</a>
   - Never mix spaces and tabs.
-  - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
+  - Use soft indents (spaces) instead of real tabs
   - For readability, set your editor's indent size to four characters &mdash; this means four spaces or four spaces representing a real tab.
 
 3. <a name="spacing">Beautiful Syntax</a>
@@ -246,8 +246,8 @@
 
     D. Consistency Always Wins
 
-    In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
-    It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
+    In sections 2.A-2.C, the whitespace rules for consistency. Lines can be separated by up to one line of white space but should never
+    have more.
 
     ```javascript
 
@@ -275,7 +275,15 @@
 
     E. Quotes
 
-    Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
+    Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the example.
+
+    ```
+    Bad:
+    $(".testClass[href^='www.any.com']").show();
+
+    Good
+    $('.testId[href^="www.any.com"]').show();
+    ```
 
     F. End of Lines and Empty Lines
 
@@ -318,17 +326,17 @@
 
         variable == null
 
-    undefined:
+    >  undefined:
 
-      Global Variables:
+    > Global Variables:
 
         typeof variable === "undefined"
 
-      Local Variables:
+    >  Local Variables:
 
         variable === undefined
 
-      Properties:
+    >  Properties:
 
         object.prop === undefined
         object.hasOwnProperty( prop )
