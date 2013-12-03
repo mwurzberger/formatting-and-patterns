@@ -28,11 +28,12 @@
   ```    
 
   - Calls can be made directly by using the entire path
+
   ```
   com.pageName.functionName(param1);
 
-  $(document).ready({
-    com.pageName.initialize();
+  $(document).ready({  
+    com.pageName.initialize();  
   });
   ```
 
