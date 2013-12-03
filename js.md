@@ -340,7 +340,7 @@
 
     >    object.prop === undefined  
     >    object.hasOwnProperty( prop )  
-    >    "prop" in object
+    >    "prop" in object  
 
     B. Coerced Types
 
