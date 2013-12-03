@@ -326,7 +326,7 @@
 
         variable == null
 
-    >  undefined:
+    undefined:
 
     > Global Variables:
 
@@ -338,8 +338,8 @@
 
     >  Properties:
 
-    >    object.prop === undefined
-    >    object.hasOwnProperty( prop )
+    >    object.prop === undefined  
+    >    object.hasOwnProperty( prop )  
     >    "prop" in object
 
     B. Coerced Types
