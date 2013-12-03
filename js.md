@@ -47,13 +47,8 @@
     A. Parens, Braces, Linebreaks
 
     ```javascript
-
-    // if/else/for/while/try always have spaces, braces and span multiple lines
-    // this encourages readability
-
     // 3.A.1.1
     // Examples of really cramped syntax
-
     if(condition) doSomething();
 
     while(condition) iterating++;
@@ -63,7 +58,6 @@
 
     // 3.A.1.1
     // Use whitespace to promote readability
-
     if ( condition ) {
       // statements
     }
@@ -92,7 +86,6 @@
     if ( value > 100 ) ? alert('Expensive') : alert('Cheap');
     ```
 
-
     B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
 
     ```javascript
@@ -106,7 +99,6 @@
     // Literal notations:
     var array = new Array(),
         object = new Object();
-
 
     // 3.B.1.2
     // Using only one `var` per scope (function) promotes readability
@@ -122,44 +114,25 @@
         bar = "",
         quux;
 
-    // or..
-    var // Comment on these
-    foo = "",
-    bar = "",
-    quux;
-
     // 3.B.1.3
-    // var statements should always be in the beginning of their respective scope (function).
-
-    // Bad
-    function foo() {
-
-      // some statements here
-
-      var bar = "",
-        qux;
-    }
-
-    // Good
+    // var statements should always be in the beginning of their respective scope (function)
     function foo() {
       var bar = "",
-        qux;
+          qux;
 
       // all statements after the variables declarations.
     }
     ```
 
     ```javascript
-
     // 3.B.2.1
     // Named Function Declaration
     function foo( arg1, argN ) {
-
+      // statements
     }
 
     // Usage
     foo( arg1, argN );
-
 
     // 3.B.2.2
     // Named Function Declaration
@@ -179,7 +152,6 @@
       // callback statements
     });
 
-
     // 3.B.2.3
     // Function Expression
     var square = function( number ) {
@@ -198,7 +170,6 @@
       return number * factorial( number - 1 );
     };
 
-
     // 3.B.2.4
     // Constructor Declaration
     function FooBar( options ) 
@@ -207,12 +178,10 @@
 
     // Usage
     var fooBar = new FooBar({ a: "alpha" });
-
     fooBar.options;
     // { a: "alpha" }
 
     ```
-
 
     C. Exceptions, Slight Deviations
 
@@ -245,7 +214,6 @@
 
     ```
 
-
     D. Consistency Always Wins
 
     Whitespace rules for consistency. Lines can be separated by up to one line of white space but should never
@@ -275,7 +243,6 @@
 
     ```
 
-
     E. Quotes
 
     Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the example.
@@ -284,13 +251,11 @@
     Bad: $(".testClass[href^='www.any.com']").show();
 
     Good: $('.testId[href^="www.any.com"]').show();
-    ```  
-
+    ```
 
     F. End of Lines and Empty Lines
 
     Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.  
-    
 
 4. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
 
