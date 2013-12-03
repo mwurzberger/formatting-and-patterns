@@ -8,13 +8,25 @@
 		<xmp id="lessmd" theme="united" style="display:none;"></xmp>
 		<xmp id="jsmd" theme="united" style="display:none;"></xmp>
 	</body>
-	<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javacript">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
 		$(document).ready( function() {
-		    $("#htmlmd").load("html.md");
-		    $("#lessmd").load("less.md");
-		    $("#jsmd").load("js.md");
+			$.get('html.md', function (data) {
+				$('#htmlmd').html(data);
+			});
+			$.get('less.md', function (data) {
+				$('#lessmd').html(data);
+			});
+			$.get('js.md', function (data) {
+				$('#jsmd').html(data);
+			});
+			$.getScript('http://strapdownjs.com/v/0.2/strapdown.js',  function( data, textStatus, jqxhr ) {
+	  			console.log( data ); // Data returned
+	  			console.log( textStatus ); // Success
+	  			console.log( jqxhr.status ); // 200
+	  			console.log( 'Load was performed.' );
+			});
 		});
 	</script>
 </html>
+
