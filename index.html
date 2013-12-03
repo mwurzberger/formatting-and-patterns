@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formatting and Patterns</title>
+	</head>
+	<body>
+		<xmp id="htmlmd" theme="united" style="display:none;"></xmp>
+		<xmp id="lessmd" theme="united" style="display:none;"></xmp>
+		<xmp id="jsmd" theme="united" style="display:none;"></xmp>
+	</body>
+	<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javacript">
+		$(document).ready( function() {
+		    $("#htmlmd").load("html.md");
+		    $("#lessmd").load("less.md");
+		    $("#jsmd").load("js.md");
+		});
+	</script>
+</html>

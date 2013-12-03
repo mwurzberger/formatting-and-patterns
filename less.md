@@ -9,9 +9,10 @@
 ## Preface
 
 The goal of this document is not to give rules that result in perfect code. It is so that with minimal effort the code will:
-* do what it is supposed to do
-* be easily understood
-* be easily maintained
+* Do what it is supposed to do
+* Reduce the lead time required to understand an implementation
+* Make it easier to establish what code can be reused
+* Clarify how updates to an implementation should be styled or structured 
 
 ## Styles
 
