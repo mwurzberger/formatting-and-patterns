@@ -245,6 +245,7 @@
 
     ```
 
+
     D. Consistency Always Wins
 
     Whitespace rules for consistency. Lines can be separated by up to one line of white space but should never
@@ -274,6 +275,7 @@
 
     ```
 
+
     E. Quotes
 
     Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the example.
@@ -282,11 +284,13 @@
     Bad: $(".testClass[href^='www.any.com']").show();
 
     Good: $('.testId[href^="www.any.com"]').show();
-    ```
+    ```  
+
 
     F. End of Lines and Empty Lines
 
-    Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
+    Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.  
+    
 
 4. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
 
