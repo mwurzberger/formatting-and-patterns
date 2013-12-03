@@ -329,19 +329,20 @@
     undefined:
 
     > Global Variables:
-
+    ```
     >    typeof variable === "undefined"
-
+    ```
     >  Local Variables:
-
+    ```
     >    variable === undefined
-
+    ```
     >  Properties:
-
+    ```
     >    object.prop === undefined  
     >    object.hasOwnProperty( prop )  
     >    "prop" in object
-
+    ```
+    
     B. Coerced Types
 
     Consider the implications of the following...
