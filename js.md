@@ -330,17 +330,17 @@
 
     > Global Variables:
 
-        typeof variable === "undefined"
+    >    typeof variable === "undefined"
 
     >  Local Variables:
 
-        variable === undefined
+    >    variable === undefined
 
     >  Properties:
 
-        object.prop === undefined
-        object.hasOwnProperty( prop )
-        "prop" in object
+    >    object.prop === undefined
+    >    object.hasOwnProperty( prop )
+    >    "prop" in object
 
     B. Coerced Types
 
