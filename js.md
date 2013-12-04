@@ -560,6 +560,11 @@ The goal of this document is not to give rules that result in perfect code. It i
     A. Use long descriptive names for varaibles. The compression will be handled during deployment.
 
     ```javascript
+    
+    // 6.A.3.0
+    // jQuery objects should be prefixed with $
+    
+    var $curTarget = $(event.currentTarget); 
 
     // 6.A.3.1
     // Naming strings
