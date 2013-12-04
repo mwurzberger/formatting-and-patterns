@@ -17,9 +17,9 @@ The goal of this document is not to give rules that result in perfect code. It i
 ## Styles
 
 1) <a name="naming">Naming</a>
-PAGE_NAME.xsl file in the xsl/PATH/pages folder
-PAGE_NAME.js file in the js/PATH/pages folder
-PAGE_NAME.less file in the css/PATH/pages folder
+  - PAGE_NAME.xsl file in the xsl/PATH/pages folder  
+  - PAGE_NAME.js file in the js/PATH/pages folder  
+  - PAGE_NAME.less file in the css/PATH/pages folder  
 
 
 2) <a name="formatting">Formatting</a>
@@ -44,8 +44,8 @@ Good:
 
 ```
 
-3) <a name="layout">Page Layout</a>
-The <body> tag should have the attribute class="PAGE-NAME-namespace" set
+3) <a name="layout">Page Layout</a>  
+The ```<body>``` tag should have the attribute class="PAGE-NAME-namespace" set
 Inline JavaScript - This should be avoided when possible. Use a binding event in the external PAGE_NAME.js file.
 Inline CSS - This should be avoided when possible. When needed add a new class to the element and define the changes in the external PAGE_NAME.less file.
 
