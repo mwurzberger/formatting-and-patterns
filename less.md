@@ -20,7 +20,8 @@ The goal of this document is not to give rules that result in perfect code. It i
 All classes should be namespaced. In LESS this is relativly straight forward, wrap the entire document with a class that is the same as the pagename.
 
 LESS
-```
+
+```css
 .PAGE_NAME-namespace {
   .class1 {
     styleline
@@ -32,7 +33,8 @@ LESS
 ```
 
 CSS
-```
+
+```css
 .PAGE_NAME-namespace .class1 {
   styleline
 }
@@ -54,15 +56,15 @@ CSS
 - Use two colons when addressing a pseudo-element (i.e. ::after, ::before, ::-webkit-scrollbar)
 - Only one selector should be on each line
 
-```
-Bad:    
-.raw-button-one, .raw-button-two, .raw-button-three {
-}
-
-Good:
+```css
+// Good
 .raw-button-one,
 .raw-button-two,
 .raw-button-three {
+}
+
+// Bad    
+.raw-button-one, .raw-button-two, .raw-button-three {
 }
 ```
 

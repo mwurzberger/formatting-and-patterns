@@ -16,13 +16,12 @@ The goal of this document is not to give rules that result in perfect code. It i
 
 ## Styles
 
-1) <a name="naming">Naming</a>
+<a name="naming">Naming</a>
   - PAGE_NAME.xsl file in the xsl/PATH/pages folder  
   - PAGE_NAME.js file in the js/PATH/pages folder  
   - PAGE_NAME.less file in the css/PATH/pages folder  
 
-
-2) <a name="formatting">Formatting</a>
+<a name="formatting">Formatting</a>
   - Indent all lines using two spaces
   - Do not use ```<br/>```, place blocking elements like ```<div>``` as appropriate
   - Do not use ```<div>``` tags for spacing-only, modify the margin of the surrounding ```<div>``` tags
@@ -32,24 +31,23 @@ The goal of this document is not to give rules that result in perfect code. It i
   - The id attribute should be in camelCase so that is matches the JavaScript conventions ```<div id="myPage">Contents</div>```
   - If tags contain more than a small amount of content then the opening and closing tags should be placed on separate lines
 
-```
-Bad:
-<div><a href="#">Link Here</a>This is a test</div>
-
-Good:
+```html
+<!-- Good -->
 <div>
   <a href="#">Link Here</a>
   This is a test
 </div>
 
+<!-- Bad -->
+<div><a href="#">Link Here</a>This is a test</div>
 ```
 
-3) <a name="layout">Page Layout</a>  
-The ```<body>``` tag should have the attribute class="PAGE-NAME-namespace" set
-Inline JavaScript - This should be avoided when possible. Use a binding event in the external PAGE_NAME.js file.
+<a name="layout">Page Layout</a>  
+The ```<body>``` tag should have the attribute class="PAGE-NAME-namespace" set  
+Inline JavaScript - This should be avoided when possible. Use a binding event in the external PAGE_NAME.js file.  
 Inline CSS - This should be avoided when possible. When needed add a new class to the element and define the changes in the external PAGE_NAME.less file.
 
-```
+```html
 <html>
   <header>
     <title>My Page</title>

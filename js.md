@@ -327,8 +327,7 @@ The goal of this document is not to give rules that result in perfect code. It i
     ```
 
 <a name="cond">Conditional Evaluation</a>
-  - It is almost always better to use the === and !== operators. 
-    The == and != operators do type coercion. In particular, do not use == to compare against falsy values.
+  - Use the === and !== operators. The == and != operators do type coercion. In particular, do not use == to compare against falsy values.
 
   ```javascript
   // When only evaluating that an array has length,
@@ -422,7 +421,7 @@ The goal of this document is not to give rules that result in perfect code. It i
 <a name="comments">Comments</a>
   - Comments are always preceded by a blank line. Comments start with a capital first letter, but don't require a period at the end, unless you're writing full sentences. There must be a single space between the comment token and the comment text; for multi-line comments a new line may be used in place of a space.
 
-  ```
+  ```javascript
   // We need an explicit "bar", because later in the code foo is checked.
   var foo = "bar";
 
