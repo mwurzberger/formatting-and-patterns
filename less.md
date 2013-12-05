@@ -51,18 +51,18 @@ The goal of this document is not to give rules that result in perfect code. It i
 <a name="selectors">Selectors</a>
   - Use the dash-format to name classes
   ```css
-    .class-name-dashed {
-      // styles
-    }
+  .class-name-dashed {
+    // styles
+  }
   ```
 
 
   - Use two colons when addressing a pseudo-element (i.e. ::after, ::before, ::-webkit-scrollbar) for readability
   
   ```css
-    a::after {
-      // styles
-    }
+  a::after {
+    // styles
+  }
   ```
 
   - Only one selector should be on each line
@@ -72,10 +72,12 @@ The goal of this document is not to give rules that result in perfect code. It i
   .raw-button-one,
   .raw-button-two,
   .raw-button-three {
+    // styles
   }
 
   // Bad    
   .raw-button-one, .raw-button-two, .raw-button-three {
+    // styles
   }
   ```
 
