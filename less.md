@@ -17,30 +17,29 @@ The goal of this document is not to give rules that result in perfect code. It i
 ## Styles
 
 <a name="namespacing">Namespacing</a>
-  All classes should be namespaced. In LESS this is relativly straight forward, wrap the entire document with a class that is the same as the pagename.
+  - All classes should be namespaced. In LESS this is relativly straight forward, wrap the entire document with a class that is the same as the pagename.
+    - LESS
 
-  LESS
+    ```css
+    .PAGE_NAME-namespace {
+      .class1 {
+        styleline
+      }
+      .class2 {
+        styleline
+      }
+    }
+    ```
 
-  ```css
-  .PAGE_NAME-namespace {
-    .class1 {
+    - CSS
+
+    ```css
+    .PAGE_NAME-namespace .class1 {
       styleline
     }
-    .class2 {
+    .PAGE_NAME-namespace .class2 {
       styleline
     }
-  }
-  ```
-
-  CSS
-
-  ```css
-  .PAGE_NAME-namespace .class1 {
-    styleline
-  }
-  .PAGE_NAME-namespace .class2 {
-    styleline
-  }
   ```
 
 <a name="formatting">Formatting</a>
@@ -51,7 +50,7 @@ The goal of this document is not to give rules that result in perfect code. It i
 
 <a name="selectors">Selectors</a>
   - Use the dash-format to name classes
-  - Use two colons when addressing a pseudo-element (i.e. ::after, ::before, ::-webkit-scrollbar)
+  - Use two colons when addressing a pseudo-element (i.e. ::after, ::before, ::-webkit-scrollbar) for readability
   - Only one selector should be on each line
 
   ```css
