@@ -21,8 +21,9 @@ The goal of this document is not to give rules that result in perfect code. It i
 ## Styles
 
 <a name="namespacing">Namespacing</a>
-  - All JavaScript should be wrapped in an object to prevent function name overlap and keep the code neat  
-  ```
+  - All JavaScript should be wrapped in an object to prevent function name overlap and keep the code neat
+
+  ```javascript
   if (! com) { var com = {}; }
   if (! com.pageName) { com.pageName= {}; }
 
@@ -44,13 +45,15 @@ The goal of this document is not to give rules that result in perfect code. It i
   }
   ```    
 
-  - Calls can be made directly by using the entire path  
-  ```
+  - Calls can be made directly by using the entire path
+
+  ```javascript
   com.pageName.functionName(param1);
   ```
 
 <a name="namingconventions">Naming Conventions</a>
   - Naming functions, objects, instances, etc
+
   ```
   camelCase; // function and var declarations
   functionNamesLikeThis;
@@ -59,6 +62,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - Naming constructors, prototypes, etc
+
   ```
   PascalCase; // constructor function
   ConstructorNamesLikeThis;
@@ -66,12 +70,14 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - Naming Symbolic Constants using ALL_CAP_UNDERSCORED
+
   ```
   SYMBOLIC_CONSTANTS_LIKE_THIS
   ```
 
   - No Abbreviations, use longer descriptive names
-  ```
+
+  ```javascript
   // Good
   var deliveryNote = 1; 
 
@@ -80,6 +86,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - Collection names should match their contents or be explicit
+
   ```
   'dog' is a string
   'dogs' is an array 
@@ -87,7 +94,8 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - Prefixes for metadata. Certain prefixes let the reader know details about the variable or function
-  ```
+
+  ```javascript
   // jQuery objects should be prefixed with $
   var $curTarget = $(event.currentTarget);
 
@@ -192,8 +200,11 @@ The goal of this document is not to give rules that result in perfect code. It i
   - Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the examples on the jQuery website. 
 
   ```javascript
-  $('.testId[href^="www.any.com"]').show(); // Good
-  var word = "word"; // Bad
+  // Good
+  $('.testId[href^="www.any.com"]').show(); 
+
+  // Bad
+  var word = "word";
   ```
 
 <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
@@ -210,7 +221,6 @@ The goal of this document is not to give rules that result in perfect code. It i
     undefined:
     > Global Variables: ```typeof variable === "undefined"```  
     >  Local Variables: ```variable === undefined```  
-
     >  Properties:
     ```javascript
     >    object.prop === undefined  
@@ -317,7 +327,8 @@ The goal of this document is not to give rules that result in perfect code. It i
     ```
 
 <a name="cond">Conditional Evaluation</a>
-  - It is almost always better to use the === and !== operators. The == and != operators do type coercion. In particular, do not use == to compare against falsy values.
+  - It is almost always better to use the === and !== operators. 
+    The == and != operators do type coercion. In particular, do not use == to compare against falsy values.
 
   ```javascript
   // When only evaluating that an array has length,
@@ -327,14 +338,12 @@ The goal of this document is not to give rules that result in perfect code. It i
   // ...evaluate truthiness, like this:
   if ( array.length ) ...
 
-
   // When only evaluating that an array is empty,
   // instead of this:
   if ( array.length === 0 ) ...
 
   // ...evaluate truthiness, like this:
   if ( !array.length ) ...
-
 
   // When only evaluating that a string is not empty,
   // instead of this:
@@ -343,14 +352,12 @@ The goal of this document is not to give rules that result in perfect code. It i
   // ...evaluate truthiness, like this:
   if ( string ) ...
 
-
   // When only evaluating that a string _is_ empty,
   // instead of this:
   if ( string === "" ) ...
 
   // ...evaluate falsy-ness, like this:
   if ( !string ) ...
-
 
   // When only evaluating that a reference is true,
   // instead of this:
@@ -411,7 +418,6 @@ The goal of this document is not to give rules that result in perfect code. It i
   // Falsy:
   "", 0, null, undefined, NaN, void 0
   ```
-
 
 <a name="comments">Comments</a>
   - Comments are always preceded by a blank line. Comments start with a capital first letter, but don't require a period at the end, unless you're writing full sentences. There must be a single space between the comment token and the comment text; for multi-line comments a new line may be used in place of a space.
