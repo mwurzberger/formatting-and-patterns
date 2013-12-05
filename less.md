@@ -23,10 +23,10 @@ The goal of this document is not to give rules that result in perfect code. It i
     ```css
     .PAGE_NAME-namespace {
       .class1 {
-        styleline
+        // styles
       }
       .class2 {
-        styleline
+        // styles
       }
     }
     ```
@@ -35,10 +35,10 @@ The goal of this document is not to give rules that result in perfect code. It i
 
     ```css
     .PAGE_NAME-namespace .class1 {
-      styleline
+      // styles
     }
     .PAGE_NAME-namespace .class2 {
-      styleline
+      // styles
     }
   ```
 
@@ -50,7 +50,21 @@ The goal of this document is not to give rules that result in perfect code. It i
 
 <a name="selectors">Selectors</a>
   - Use the dash-format to name classes
+  ```css
+    .class-name-dashed {
+      // styles
+    }
+  ```
+
+
   - Use two colons when addressing a pseudo-element (i.e. ::after, ::before, ::-webkit-scrollbar) for readability
+  
+  ```css
+    a::after {
+      // styles
+    }
+  ```
+
   - Only one selector should be on each line
 
   ```css
