@@ -50,28 +50,31 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
 <a name="namingconventions">Naming Conventions</a>
-    - Naming functions, objects, instances, etc  
+    - Naming functions, objects, instances, etc
+
     ```
     camelCase; // function and var declarations
     functionNamesLikeThis;
     variableNamesLikeThis;
     methodNamesLikeThis;
-
     ```
 
-    - Naming constructors, prototypes, etc  
+    - Naming constructors, prototypes, etc
+
     ```
     PascalCase; // constructor function
     ConstructorNamesLikeThis;
     EnumNamesLikeThis;
     ```
 
-    - Naming Symbolic Constants using ALL_CAP_UNDERSCORED  
+    - Naming Symbolic Constants using ALL_CAP_UNDERSCORED
+
     ```
     SYMBOLIC_CONSTANTS_LIKE_THIS
     ```
 
-    - No Abbreviations, use longer descriptive names  
+    - No Abbreviations, use longer descriptive names
+
     ```javascript
     // Good
     var deliveryNote = 1; 
@@ -80,13 +83,15 @@ The goal of this document is not to give rules that result in perfect code. It i
     var delNote = 1; 
     ```
 
-    - Collection names should match their contents  
+    - Collection names should match their contents
+
     ```
     'dog' is a string
     'dogs' is an array 
     ```
 
-    - Prefixes for metadata. Certain prefixes let the reader know details about the variable or function 
+    - Prefixes for metadata. Certain prefixes let the reader know details about the variable or function
+
     ```javascript
     // jQuery objects should be prefixed with $
     var $curTarget = $(event.currentTarget);
@@ -184,7 +189,8 @@ The goal of this document is not to give rules that result in perfect code. It i
   fooBar.options;
   ```
 
-  - Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the examples on the jQuery website.  
+  - Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the examples on the jQuery website. 
+   
   ```javascript
   $('.testId[href^="www.any.com"]').show(); // Good
   var word = "word"; // Bad
@@ -311,6 +317,7 @@ The goal of this document is not to give rules that result in perfect code. It i
 
 <a name="cond">Conditional Evaluation</a>
   - It is almost always better to use the === and !== operators. The == and != operators do type coercion. In particular, do not use == to compare against falsy values.
+
   ```javascript
 
   // When only evaluating that an array has length,
@@ -375,7 +382,6 @@ The goal of this document is not to give rules that result in perfect code. It i
   // Remember, using == will match a `null` to BOTH `null` and `undefined`
   // but not `false`, "" or 0
   null == undefined
-
   ```
   - ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
 
@@ -415,21 +421,18 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
   // We need an explicit "bar", because later in the code foo is checked.
   var foo = "bar";
-  ```
 
-  ```
   /*
   Four score and seven-pause-minutes ago...
   */
-  ```
 
-  ```
   function foo( types, selector, data, fn, /* INTERNAL */ one ) {
       // Do stuff
   }
   ```
 
-  Commenting for documentation should be done using the YUIDoc style. Documentation of the style http://yui.github.io/yuidoc/
+  - Commenting for documentation should be done using the YUIDoc style. Documentation of the style http://yui.github.io/yuidoc/
+
   ```javascript
   /**
    * Reverse a string
