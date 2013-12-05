@@ -71,7 +71,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - No Abbreviations, use longer descriptive names
-  ```javascript
+  ```
   // Good
   var deliveryNote = 1; 
 
@@ -87,7 +87,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - Prefixes for metadata. Certain prefixes let the reader know details about the variable or function
-  ```javascript
+  ```
   // jQuery objects should be prefixed with $
   var $curTarget = $(event.currentTarget);
 
@@ -122,6 +122,7 @@ The goal of this document is not to give rules that result in perfect code. It i
 
 <a name="spacing">Beautiful Syntax</a> 
   - Parens, Braces, Linebreaks  
+
   ```javascript
   // Open braces on same line as the previous statement
   // Close braces on the same indent as the original function call
@@ -147,6 +148,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - Assignments, Declarations, Functions ( Named, Expression, Constructor )
+
   ```javascript
   // Using only one `var` per scope (function) promotes readability
   // and keeps your declaration list free of clutter 
@@ -164,8 +166,11 @@ The goal of this document is not to give rules that result in perfect code. It i
         qux;
     // statements
   }
+  ```
 
   - Callbacks can be passed in one of two ways
+
+  ```javascript
   // Inline
   $( "#target" ).click( function() {
     // statements
@@ -193,18 +198,19 @@ The goal of this document is not to give rules that result in perfect code. It i
 
 <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
   - Actual Types
-    String: ```typeof variable === "string"```
-    Number: ```typeof variable === "number"```
-    Boolean: ```typeof variable === "boolean"```
-    Object: ```typeof variable === "object"```
-    Array: ```Array.isArray( arrayLikeObject )```
-    Node: ```elem.nodeType === 1```
-    null: ```variable === null```
-    null or undefined: ```variable == null```
+    String: ```typeof variable === "string"```  
+    Number: ```typeof variable === "number"```  
+    Boolean: ```typeof variable === "boolean"```  
+    Object: ```typeof variable === "object"```  
+    Array: ```Array.isArray( arrayLikeObject )```  
+    Node: ```elem.nodeType === 1```  
+    null: ```variable === null```  
+    null or undefined: ```variable == null```  
 
     undefined:
-    > Global Variables: ```typeof variable === "undefined"```
-    >  Local Variables: ```variable === undefined```
+    > Global Variables: ```typeof variable === "undefined"```  
+    >  Local Variables: ```variable === undefined```  
+
     >  Properties:
     ```javascript
     >    object.prop === undefined  
@@ -213,7 +219,9 @@ The goal of this document is not to give rules that result in perfect code. It i
     ```
     
   - Coerced Types
+
     Consider the implications of the following...
+    
     Given this HTML: ```html <input type="text" id="foo-input" value="1">```
 
     ```javascript
@@ -222,7 +230,6 @@ The goal of this document is not to give rules that result in perfect code. It i
 
     // typeof foo;
     // "number"
-    
 
     // Somewhere later in your code, you need to update `foo`
     // with a new value derived from an input element
@@ -254,7 +261,6 @@ The goal of this document is not to give rules that result in perfect code. It i
     ```
 
     Here are some common cases along with coercions:
-
 
     ```javascript
     var number = 1,
@@ -314,7 +320,6 @@ The goal of this document is not to give rules that result in perfect code. It i
   - It is almost always better to use the === and !== operators. The == and != operators do type coercion. In particular, do not use == to compare against falsy values.
 
   ```javascript
-
   // When only evaluating that an array has length,
   // instead of this:
   if ( array.length > 0 ) ...
@@ -354,7 +359,6 @@ The goal of this document is not to give rules that result in perfect code. It i
   // ...evaluate like you mean it, take advantage of built in capabilities:
   if ( foo ) ...
 
-
   // When evaluating that a reference is false,
   // instead of this:
   if ( foo === false ) ...
@@ -381,7 +385,6 @@ The goal of this document is not to give rules that result in perfect code. It i
   - ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
 
   ```javascript
-
   // Type coercion and evaluation notes
 
   // Prefer `===` over `==` (unless the case requires loose type evaluation)
