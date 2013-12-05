@@ -50,71 +50,66 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
 <a name="namingconventions">Naming Conventions</a>
-    - Naming functions, objects, instances, etc
+  - Naming functions, objects, instances, etc
+  ```
+  camelCase; // function and var declarations
+  functionNamesLikeThis;
+  variableNamesLikeThis;
+  methodNamesLikeThis;
+  ```
 
-    ```
-    camelCase; // function and var declarations
-    functionNamesLikeThis;
-    variableNamesLikeThis;
-    methodNamesLikeThis;
-    ```
+  - Naming constructors, prototypes, etc
+  ```
+  PascalCase; // constructor function
+  ConstructorNamesLikeThis;
+  EnumNamesLikeThis;
+  ```
 
-    - Naming constructors, prototypes, etc
+  - Naming Symbolic Constants using ALL_CAP_UNDERSCORED
+  ```
+  SYMBOLIC_CONSTANTS_LIKE_THIS
+  ```
 
-    ```
-    PascalCase; // constructor function
-    ConstructorNamesLikeThis;
-    EnumNamesLikeThis;
-    ```
+  - No Abbreviations, use longer descriptive names
+  ```javascript
+  // Good
+  var deliveryNote = 1; 
 
-    - Naming Symbolic Constants using ALL_CAP_UNDERSCORED
+  // Bad
+  var delNote = 1; 
+  ```
 
-    ```
-    SYMBOLIC_CONSTANTS_LIKE_THIS
-    ```
+  - Collection names should match their contents or be explicit
+  ```
+  'dog' is a string
+  'dogs' is an array 
+  'dogArray' is an array
+  ```
 
-    - No Abbreviations, use longer descriptive names
+  - Prefixes for metadata. Certain prefixes let the reader know details about the variable or function
+  ```javascript
+  // jQuery objects should be prefixed with $
+  var $curTarget = $(event.currentTarget);
 
-    ```javascript
-    // Good
-    var deliveryNote = 1; 
+  // Regular Expressions prefixed with r
+  var rEmailer = //;
 
-    // Bad
-    var delNote = 1; 
-    ```
-
-    - Collection names should match their contents
-
-    ```
-    'dog' is a string
-    'dogs' is an array 
-    ```
-
-    - Prefixes for metadata. Certain prefixes let the reader know details about the variable or function
-
-    ```javascript
-    // jQuery objects should be prefixed with $
-    var $curTarget = $(event.currentTarget);
-
-    // Regular Expressions prefixed with r
-    var rEmailer = //;
-
-    // Private methods are prefixed with _
-    com.pageName = function() {
-      var publicFunction = function () {
-        _privateFunction();
-      }
-
-      var _privateFunction = function () {
-      }
-
-      var oPublic = {
-          publicFunction: publicFunction
-      };
-
-      return oPublic;
+  // Private methods are prefixed with _
+  com.pageName = function() {
+    var publicFunction = function () {
+      _privateFunction();
     }
-    ```    
+
+    var _privateFunction = function () {
+    }
+
+    var oPublic = {
+        publicFunction: publicFunction
+    };
+
+    return oPublic;
+  }
+  ```    
 
 <a name="whitespace">Whitespace</a>
   - Use 4 space indentation
@@ -190,7 +185,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```
 
   - Use single quotes for all strings. For complex jQuery selectors the single and double quotes can be reversed from the examples on the jQuery website. 
-   
+
   ```javascript
   $('.testId[href^="www.any.com"]').show(); // Good
   var word = "word"; // Bad
