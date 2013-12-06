@@ -34,7 +34,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   }
 
   com.pageName = function() {
-      var functionName = function () {
+      var functionName = function() {
       }
 
       var oPublic = {
@@ -104,7 +104,7 @@ The goal of this document is not to give rules that result in perfect code. It i
 
   // Private methods are prefixed with _
   com.pageName = function() {
-    var publicFunction = function () {
+    var publicFunction = function() {
       _privateFunction();
     }
 
@@ -124,7 +124,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   - Never mix spaces and tabs
   - No trailing whitespace on any line
   - No more than one blank line separating any other command
-  - There should be no spaces between the function name and the first ```(```
+  - There should be no spaces between the function name and the first ```(``` 
   - There should be a space after open parens and before close parens ```function( param1, param2 )```
   - One space should be added following commas and colons ```{param1: "Hello", param2: "World"}```
 
@@ -332,57 +332,57 @@ The goal of this document is not to give rules that result in perfect code. It i
   ```javascript
   // When only evaluating that an array has length,
   // instead of this:
-  if ( array.length > 0 ) ...
+  if( array.length > 0 ) ...
 
   // ...evaluate truthiness, like this:
-  if ( array.length ) ...
+  if( array.length ) ...
 
   // When only evaluating that an array is empty,
   // instead of this:
-  if ( array.length === 0 ) ...
+  if( array.length === 0 ) ...
 
   // ...evaluate truthiness, like this:
-  if ( !array.length ) ...
+  if( !array.length ) ...
 
   // When only evaluating that a string is not empty,
   // instead of this:
-  if ( string !== "" ) ...
+  if( string !== "" ) ...
 
   // ...evaluate truthiness, like this:
-  if ( string ) ...
+  if( string ) ...
 
   // When only evaluating that a string _is_ empty,
   // instead of this:
-  if ( string === "" ) ...
+  if( string === "" ) ...
 
   // ...evaluate falsy-ness, like this:
-  if ( !string ) ...
+  if( !string ) ...
 
   // When only evaluating that a reference is true,
   // instead of this:
-  if ( foo === true ) ...
+  if( foo === true ) ...
 
   // ...evaluate like you mean it, take advantage of built in capabilities:
-  if ( foo ) ...
+  if( foo ) ...
 
   // When evaluating that a reference is false,
   // instead of this:
-  if ( foo === false ) ...
+  if( foo === false ) ...
 
   // ...use negation to coerce a true evaluation
-  if ( !foo ) ...
+  if( !foo ) ...
 
   // ...Be careful, this will also match: 0, "", null, undefined, NaN
   // If you _MUST_ test for a boolean false, then use
-  if ( foo === false ) ...
+  if( foo === false ) ...
 
 
   // When only evaluating a ref that might be null or undefined, but NOT false, "" or 0,
   // instead of this:
-  if ( foo === null || foo === undefined ) ...
+  if( foo === null || foo === undefined ) ...
 
   // ...take advantage of == type coercion, like this:
-  if ( foo == null ) ...
+  if( foo == null ) ...
 
   // Remember, using == will match a `null` to BOTH `null` and `undefined`
   // but not `false`, "" or 0
