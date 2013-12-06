@@ -27,21 +27,31 @@ The goal of this document is not to give rules that result in perfect code. It i
   if (! com) { var com = {}; }
   if (! com.pageName) { com.pageName= {}; }
 
+  // Wrapping new functions and variables within an object as properties
   com.pageName = {
     variableName: 'variableValue',
     functionName: function( param1 ) {
+      // statements
     }
   }
 
+  // Wrapping functions and variables within a function
+  // An API is returned from the function as a JS object, the properties are the publicly accessable functions and variables
+  // See example module-pattern-jquery.html
   com.pageName = function() {
-      var functionName = function () {
-      }
+    var publicFunction = function() {
+      privateFunction();
+    }
 
-      var oPublic = {
-          functionName: functionName
-      };
+    var privateFunction = function() {
+      // statements
+    }
 
-      return oPublic;
+    var oPublic = {
+      publicFunction: publicFunction
+    };
+
+    return oPublic;
   }
   ```    
 
@@ -109,10 +119,11 @@ The goal of this document is not to give rules that result in perfect code. It i
     }
 
     var _privateFunction = function () {
+      // statements
     }
 
     var oPublic = {
-        publicFunction: publicFunction
+      publicFunction: publicFunction
     };
 
     return oPublic;
@@ -430,7 +441,7 @@ The goal of this document is not to give rules that result in perfect code. It i
   */
 
   function foo( types, selector, data, fn, /* INTERNAL */ one ) {
-      // Do stuff
+    // statements
   }
   ```
 
@@ -444,9 +455,9 @@ The goal of this document is not to give rules that result in perfect code. It i
    * @return {String} The reversed string
    */
   function reverse(input_string) {
-    // ...
+    // statements
     return output_string;
-  };
+  }
   ```
 
 ----------
