@@ -17,9 +17,9 @@ The goal of this document is not to give rules that result in perfect code. It i
 ## Styles
 
 <a name="naming">Naming</a>
-  - PAGE_NAME.xsl file in the xsl/PATH/pages folder  
-  - PAGE_NAME.js file in the js/PATH/pages folder  
-  - PAGE_NAME.less file in the css/PATH/pages folder  
+  - pageName.xsl file in the xsl/PATH/pages folder  
+  - pageName.js file in the js/PATH/pages folder  
+  - pageName.less file in the css/PATH/pages folder  
 
 <a name="formatting">Formatting</a>
   - Indent all lines using two spaces
