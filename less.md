@@ -21,7 +21,7 @@ The goal of this document is not to give rules that result in perfect code. It i
     - LESS
 
     ```css
-    .PAGE_NAME-ns {
+    .pageName-ns {
       .class1 {
         // styles
       }
@@ -34,10 +34,10 @@ The goal of this document is not to give rules that result in perfect code. It i
     - CSS
 
     ```css
-    .PAGE_NAME-ns .class1 {
+    .pageName-ns .class1 {
       // styles
     }
-    .PAGE_NAME-ns .class2 {
+    .pageName-ns .class2 {
       // styles
     }
   ```
